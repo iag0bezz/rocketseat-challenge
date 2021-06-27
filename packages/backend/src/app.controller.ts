@@ -17,13 +17,11 @@ export class AppController implements OnModuleInit {
 
   @Get()
   async getHello() {
-    const result = await this.client
-      .send('challenge.correction', {
-        submissionId: '1',
-        repositoryUrl: 'https://github.com/iag0bezz/',
-      })
-      .toPromise();
+    console.log('Starting operations');
 
-    return result;
+    return await this.client.send('challenge.correction', {
+      submissionId: '1',
+      repositoryUrl: 'https://github.com/iag0bezz/',
+    });
   }
 }
