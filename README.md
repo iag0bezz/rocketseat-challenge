@@ -55,9 +55,9 @@ Neste projeto, está incluído o **[corrections](packages/corrections) (serviço
 
 **Operações necessárias**
 
-- [ ] Criar
-- [ ] Remover
-- [ ] Editar
+- [x] Criar
+- [x] Remover
+- [x] Editar
 - [ ] Listar
   - [ ] Paginação
   - [ ] Busca por título e descrição
