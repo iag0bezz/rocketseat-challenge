@@ -1,1 +1,0 @@
-ALTER ROLE root SUPERUSER;
