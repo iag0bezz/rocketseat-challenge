@@ -8,7 +8,7 @@ import {
   BeforeInsert,
 } from 'typeorm';
 import { ObjectType, Field } from '@nestjs/graphql';
-import { SubmissionModel } from 'src/submission/submission.model';
+import { SubmissionModel } from 'src/submission/entity/submission.model';
 import { v4 } from 'uuid';
 
 @ObjectType()
@@ -31,9 +31,9 @@ export class ChallengeModel {
   @CreateDateColumn()
   date: Date;
 
-  @Field(() => [SubmissionModel], { nullable: true })
-  @OneToMany(() => SubmissionModel, model => model.challenge)
-  submissions: SubmissionModel[];
+  @Field(() => [SubmissionModel])
+  @OneToMany(() => SubmissionModel, submission => submission.challenge, { onDelete: 'CASCADE', onUpdate: 'CASCADE', nullable: true })
+  submissions: Promise<SubmissionModel[]>;
 
   @BeforeInsert()
   beforeInsert() {

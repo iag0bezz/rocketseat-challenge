@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { Field, ObjectType } from '@nestjs/graphql';
-import { ChallengeModel } from 'src/challenge/challenge.model';
+import { ChallengeModel } from 'src/challenge/entity/challenge.model';
 import {
   Column,
   CreateDateColumn,
@@ -19,10 +19,6 @@ export class SubmissionModel {
     @PrimaryColumn('text')
     id: string;
 
-    @Field(() => ChallengeModel)
-    @ManyToOne(() => ChallengeModel, challenge => challenge.submissions)
-    challenge: ChallengeModel;
-
     @Field()
     @Column('text', { nullable: false })
     repositoryUrl: string;
@@ -39,6 +35,14 @@ export class SubmissionModel {
     @Field()
     @Column('int', { nullable: false })
     grade: number;
+
+    @Field()
+    @Column('text', { nullable: false })
+    challengeId: string;
+
+    @Field(() => ChallengeModel)
+    @ManyToOne(() => ChallengeModel, challenge => challenge.submissions, { nullable: false })
+    challenge: Promise<ChallengeModel>;
 
     @BeforeInsert()
     beforeInsert() {
