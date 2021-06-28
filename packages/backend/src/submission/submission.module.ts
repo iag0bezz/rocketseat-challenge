@@ -3,6 +3,7 @@ import { SubmissionModel } from './submission.model';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { SubmissionResolver } from './submission.resolver';
 import { SubmissionService } from './submission.service';
+import { SubmissionController } from './submission.controller';
 
 @Module({
   imports: [
@@ -11,6 +12,6 @@ import { SubmissionService } from './submission.service';
   ],
   providers: [SubmissionService, SubmissionResolver],
   exports: [SubmissionService],
-  controllers: [],
+  controllers: [SubmissionController],
 })
 export class SubmissionModule {}

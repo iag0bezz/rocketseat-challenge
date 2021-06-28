@@ -10,4 +10,14 @@ export class SubmissionService {
     @InjectRepository(SubmissionModel)
     private repository: Repository<SubmissionModel>,
   ) {}
+
+  async create(details: SubmissionDTO): Promise<SubmissionModel> {
+    const submission = await this.repository.create(details);
+
+    return await this.repository.save(submission);
+  }
+
+  findAll(): Promise<SubmissionModel[]> {
+    return this.repository.find();
+  }
 }

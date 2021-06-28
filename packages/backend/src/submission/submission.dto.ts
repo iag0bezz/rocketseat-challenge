@@ -1,8 +1,22 @@
 /* eslint-disable prettier/prettier */
-export interface SubmissionDTO {
-  id: string;
+import { Field, InputType } from '@nestjs/graphql';
+@InputType()
+export class SubmissionDTO {
+  @Field()
+  id?: string;
+
+  @Field()
+  challengeId: string;
+
+  @Field()
   repositoryUrl: string;
-  date: Date;
+
+  @Field()
+  date?: Date;
+
+  @Field()
   status: string;
+
+  @Field()
   grade: number;
 }

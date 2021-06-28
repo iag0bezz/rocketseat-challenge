@@ -9,14 +9,14 @@ import {
   PrimaryColumn,
   BeforeInsert,
 } from 'typeorm';
-import { uuid } from 'uuidv4';
+import { v4 } from 'uuid';
 
 @Entity('submissions')
 @ObjectType()
 export class SubmissionModel {
     
     @Field()
-    @PrimaryColumn('text', { nullable: false })
+    @PrimaryColumn('text')
     id: string;
 
     @Field(() => ChallengeModel)
@@ -42,6 +42,6 @@ export class SubmissionModel {
 
     @BeforeInsert()
     beforeInsert() {
-      this.id = uuid().replace(/-/g, '');
+      this.id = v4().replace(/-/g, '');
     }
 }
