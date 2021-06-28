@@ -9,13 +9,13 @@ import {
 } from 'typeorm';
 import { ObjectType, Field } from '@nestjs/graphql';
 import { SubmissionModel } from 'src/submission/submission.model';
-import { uuid } from 'uuidv4';
+import { v4 } from 'uuid';
 
 @ObjectType()
 @Entity('challenges')
 export class ChallengeModel {
   @Field()
-  @PrimaryColumn('text', { nullable: false })
+  @PrimaryColumn('text')
   id: string;
 
   @Field()
@@ -37,6 +37,6 @@ export class ChallengeModel {
 
   @BeforeInsert()
   beforeInsert() {
-    this.id = uuid().replace(/-/g, '');
+    this.id = v4().replace(/-/g, '');
   }
 }

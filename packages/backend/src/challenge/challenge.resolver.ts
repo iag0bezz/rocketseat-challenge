@@ -19,8 +19,11 @@ export class ChallengeResolver {
   }
 
   @Mutation(() => ChallengeModel)
-  async updateChallenge(@Args('challenge') details: ChallengeDTO) {
-    return await this.service.update(details.id, details);
+  async updateChallenge(
+    @Args('id') id: string,
+    @Args('challenge') details: ChallengeDTO,
+  ) {
+    return await this.service.update(id, details);
   }
 
   @Mutation(() => ChallengeModel)

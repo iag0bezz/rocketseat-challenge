@@ -11,8 +11,10 @@ export class ChallengeService {
     private repository: Repository<ChallengeModel>,
   ) {}
 
-  create(details: ChallengeDTO): Promise<ChallengeModel> {
-    return this.repository.save(details);
+  async create(details: ChallengeDTO): Promise<ChallengeModel> {
+    const challenge = await this.repository.create(details);
+
+    return await this.repository.save(challenge);
   }
 
   delete(id: string) {

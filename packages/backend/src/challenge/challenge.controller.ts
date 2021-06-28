@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Inject, Post, Req } from '@nestjs/common';
+import { Body, Controller, Get, Inject, Post } from '@nestjs/common';
 import { ChallengeDTO } from './challenge.dto';
 import { ChallengeResolver } from './challenge.resolver';
 
