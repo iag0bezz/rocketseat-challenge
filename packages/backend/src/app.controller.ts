@@ -1,13 +1,10 @@
 import { Controller, Get, OnModuleInit } from '@nestjs/common';
-import { AppService } from './app.service';
 import { Client, ClientKafka } from '@nestjs/microservices';
-import { microserviceConfig } from './microserviceConfig';
+import { KafkaConfig } from './KafkaConfig';
 
 @Controller()
 export class AppController implements OnModuleInit {
-  constructor(private readonly appService: AppService) {}
-
-  @Client(microserviceConfig)
+  @Client(KafkaConfig)
   client: ClientKafka;
 
   async onModuleInit() {

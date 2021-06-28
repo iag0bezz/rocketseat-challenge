@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { KafkaOptions, Transport } from '@nestjs/microservices';
 
-export const microserviceConfig: KafkaOptions = {
+export const KafkaConfig: KafkaOptions = {
   transport: Transport.KAFKA,
   options: {
     client: {

@@ -2,7 +2,6 @@ import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { ChallengeModule } from './challenge/challenge.module';
 import { SubmissionModule } from './submission/submission.module';
 
@@ -23,6 +22,6 @@ import { SubmissionModule } from './submission/submission.module';
     SubmissionModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [],
 })
 export class AppModule {}
