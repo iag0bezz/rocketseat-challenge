@@ -26,6 +26,7 @@
     "@nestjs/graphql": "^7.11.0",
     "@nestjs/microservices": "^7.6.18",
     "@nestjs/platform-express": "^7.6.15",
+    "@nestjs/swagger": "^4.8.2",
     "@nestjs/typeorm": "^7.1.5",
     "apollo-server-express": "^2.25.2",
     "graphql": "^15.5.1",
@@ -35,6 +36,7 @@
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^6.6.6",
+    "swagger-ui-express": "^4.1.6",
     "typeorm": "^0.2.34"
   },
   "devDependencies": {
