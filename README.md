@@ -58,9 +58,9 @@ Neste projeto, está incluído o **[corrections](packages/corrections) (serviço
 - [x] Criar
 - [x] Remover
 - [x] Editar
-- [ ] Listar
-  - [ ] Paginação
-  - [ ] Busca por título e descrição
+- [x] Listar
+  - [x] Paginação
+  - [x] Busca por título e descrição
 
 ### 📓 Submissão
 
@@ -75,10 +75,10 @@ Neste projeto, está incluído o **[corrections](packages/corrections) (serviço
 
 **Operações necessárias**
 
-- [ ] Enviar
-- [ ] Listar
-  - [ ] Filtros: desafio, intervalo de datas, status
-  - [ ] Paginação
+- [x] Enviar
+- [x] Listar
+  - [x] Filtros: desafio, intervalo de datas, status
+  - [x] Paginação
 
 ## ✔️ Critérios de Avaliação
 
@@ -141,10 +141,10 @@ Mutation {
 ```
 
 ### :notebook: To-do list
-- [ ] Fazer o fork do projeto
-- [ ] Configurar ambiente de desenvolvimento (inclusive executar o serviço de [corrections](packages/corrections))
-- [ ] Criar uma [API GraphQL](https://docs.nestjs.com/graphql/quick-start) com o [contexto](#-contexto) acima utilizando Typescript
-- [ ] Fazer a integração com o serviço de [corrections](packages/corrections) através do Apache Kafka
+- [x] Fazer o fork do projeto
+- [x] Configurar ambiente de desenvolvimento (inclusive executar o serviço de [corrections](packages/corrections))
+- [x] Criar uma [API GraphQL](https://docs.nestjs.com/graphql/quick-start) com o [contexto](#-contexto) acima utilizando Typescript
+- [x] Fazer a integração com o serviço de [corrections](packages/corrections) através do Apache Kafka
 - [ ] Incluir no README as instruções de instalação do projeto
 
 :information_source: _Sinta-se livre para incluir quaisquer observações que achar necessário_
