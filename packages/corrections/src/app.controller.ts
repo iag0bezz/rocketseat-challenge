@@ -12,7 +12,7 @@ interface CorrectLessonResponse {
   submissionId: string;
   repositoryUrl: string;
   grade: number;
-  status: 'Peding' | 'Error' | 'Done';
+  status: 'Pending' | 'Error' | 'Done';
 }
 
 @Controller()
@@ -22,6 +22,8 @@ export class AppController {
     @Payload() message: CorrectLessonMessage,
   ): CorrectLessonResponse {
     const { submissionId, repositoryUrl } = message.value;
+
+    console.log(message.value);
 
     return {
       submissionId,

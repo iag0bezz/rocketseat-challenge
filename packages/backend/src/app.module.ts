@@ -1,9 +1,8 @@
 import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { AppController } from './app.controller';
-import { ChallengeModule } from './challenge/challenge.module';
-import { SubmissionModule } from './submission/submission.module';
+import { ChallengeModule } from './modules/challenge/challenge.module';
+import { SubmissionModule } from './modules/submission/submission.module';
 
 @Module({
   imports: [
@@ -21,7 +20,5 @@ import { SubmissionModule } from './submission/submission.module';
     ChallengeModule,
     SubmissionModule,
   ],
-  controllers: [AppController],
-  providers: [],
 })
 export class AppModule {}

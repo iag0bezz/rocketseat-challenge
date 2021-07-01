@@ -2,7 +2,7 @@ version: "3"
 
 services:
   postgres:
-    container_name: postgres
+    container_name: challenge_postgres
     image: "bitnami/postgresql"
     restart: always
     ports:
@@ -15,7 +15,7 @@ services:
       - "postgresql_data:/bitnami/postgresql"
 
   zookeeper:
-    container_name: zookeeper
+    container_name: challenge_zookeeper
     image: "bitnami/zookeeper:3"
     ports:
       - "2181:2181"
@@ -27,7 +27,7 @@ services:
       - app-net
 
   kafka:
-    container_name: kafka
+    container_name: challenge_kafka
     image: "bitnami/kafka:2"
     ports:
       - "9092:9092"

@@ -1,9 +1,9 @@
-import { Module, forwardRef } from '@nestjs/common';
-import { ChallengeModel } from './challenge.model';
+import { forwardRef, Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ChallengeService } from './challenge.service';
-import { ChallengeResolver } from './challenge.resolver';
-import { ChallengeController } from './challenge.controller';
+import { ChallengeController } from './controller/challenge.controller';
+import { ChallengeModel } from './domain/challenge.entity';
+import { ChallengeResolver } from './resolver/challenge.resolver';
+import { ChallengeService } from './service/challenge.service';
 
 @Module({
   imports: [
