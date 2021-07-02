@@ -19,3 +19,16 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
+
+### Testando o app
+
+```bash
+# Run all tests
+$ npm run test
+
+# Run all tests coverage
+$ npm run test:cov
+
+# Run e2e test
+$ npm run test:e2e
+```
