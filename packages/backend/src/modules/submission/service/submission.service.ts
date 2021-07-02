@@ -7,8 +7,8 @@ import {
 } from '@nestjs/common';
 import { ClientKafka } from '@nestjs/microservices';
 import { InjectRepository } from '@nestjs/typeorm';
-import { ChallengeService } from 'src/modules/challenge/service/challenge.service';
-import { isValidUrl } from 'src/utils/isValidUrl';
+import { ChallengeService } from '../../../modules/challenge/service/challenge.service';
+import { isValidUrl } from '../../../utils/isValidUrl';
 import { Repository } from 'typeorm';
 import { SubmissionDomain } from '../domain/submission.domain';
 import { SubmissionModel } from '../domain/submission.entity';

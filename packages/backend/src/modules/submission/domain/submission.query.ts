@@ -3,20 +3,20 @@ import { Field, InputType } from '@nestjs/graphql';
 @InputType()
 export class SubmissionQuery {
   @Field({ nullable: true })
-  challenge: string;
+  challenge?: string;
 
   @Field({ nullable: true })
-  status: string;
+  status?: string;
 
   @Field({ nullable: true })
-  limit: number;
+  limit?: number;
 
   @Field({ nullable: true })
-  page: number;
+  page?: number;
 
   @Field({ nullable: true })
-  startDate: string;
+  startDate?: string;
 
   @Field({ nullable: true })
-  endDate: string;
+  endDate?: string;
 }
