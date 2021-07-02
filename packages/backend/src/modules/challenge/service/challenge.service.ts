@@ -29,12 +29,11 @@ export class ChallengeService {
   }
 
   async update(id: string, details: ChallengeDomain): Promise<ChallengeModel> {
-    const challenge = await this.findOneOrFail(id);
+    const challenge = await this.findOne(id);
 
-    challenge.title = details.title;
-    challenge.description = details.description;
+    await this.repository.update(challenge, { ...details });
 
-    return this.repository.save(challenge);
+    return this.repository.create({ ...challenge, ...details });
   }
 
   findAll(query: ChallengeQuery): Promise<ChallengeModel[]> {
@@ -66,9 +65,5 @@ export class ChallengeService {
 
   findOne(id: string): Promise<ChallengeModel> {
     return this.repository.findOne(id);
-  }
-
-  findOneOrFail(id: string): Promise<ChallengeModel> {
-    return this.repository.findOneOrFail(id);
   }
 }

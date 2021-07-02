@@ -3,17 +3,17 @@ import { Field, InputType } from '@nestjs/graphql';
 @InputType()
 export class ChallengeQuery {
   @Field({ nullable: true })
-  filter: string;
+  filter?: string;
 
   @Field({ nullable: true })
-  limit: number;
+  limit?: number;
 
   @Field({ nullable: true })
-  page: number;
+  page?: number;
 
   @Field({ nullable: true })
-  startDate: string;
+  startDate?: string;
 
   @Field({ nullable: true })
-  endDate: string;
+  endDate?: string;
 }
